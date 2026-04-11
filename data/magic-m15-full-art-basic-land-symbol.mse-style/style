@@ -300,6 +300,9 @@ styling field:
 	name:			rounded textbox
 	description:	Should the textbox background have rounded corners?
 	initial:		yes
+
+include file: /magic-modules.mse-include/watermarks/styling_fields
+
 styling field:
 	type:			choice
 	name:			PT color scheme
@@ -442,6 +445,7 @@ include file: /magic-modules.mse-include/corners/card_fields
 include file: /magic-modules.mse-include/information/card_fields
 include file: /magic-modules.mse-include/separators/card_fields
 include file: /magic-modules.mse-include/stamps/card_fields
+include file: /magic-modules.mse-include/watermarks/card_fields
 
 card style:
 	############################# Background stuff
@@ -478,21 +482,21 @@ card style:
 			color:				{ name_font_color() }
 	casting cost:
 		right:				346
-		top:				28
-		width:				{ max(35, card_style.casting_cost.content_width + 6) }
-		height:				26
+		top:				29
+		width:				{ max(30, card_style.casting_cost.content_width + 5) }
+		height:				23
 		z index:			920
 		alignment:			middle right
 		always symbol:		true
 		font:
 			name:				MPlantin
 			italic name:		{ name_font_italic() }
-			size:				{ name_font_size() }
+			size:				15
 			scale down to:		7
 			color:				{ name_font_color() }
 		symbol font:
 			name:				{ styling.casting_cost_mana_symbols }
-			size:				{ name_font_size() }
+			size:				15
 			scale down to:		7
 	alias:
 		left:				54

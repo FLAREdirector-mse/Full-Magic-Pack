@@ -418,6 +418,7 @@ styling field:
 	type: text
 	name: popout image style
 	description: The styling instructions for the popout image field, formatted as "left,top,width,height,". The text MUST end with a comma.
+include file: /magic-modules.mse-include/watermarks/styling_fields
 styling field:
 	type: choice
 	name: legend crown
@@ -536,6 +537,8 @@ include file: /magic-modules.mse-include/corners/card_fields
 include file: /magic-modules.mse-include/information/card_fields
 include file: /magic-modules.mse-include/card-symbols/card_fields
 include file: /magic-modules.mse-include/stamps/card_fields
+include file: /magic-modules.mse-include/alias/card_fields
+include file: /magic-modules.mse-include/watermarks/card_fields
 card style:
 ############################# Background stuff
 	border color:
@@ -768,7 +771,7 @@ card style:
 		line height line max: 1.6
 	chapter text:
 		left: {30+(if is_class() then 158 else 0)}
-		top: 60
+		top: {if alias_enabled() then 78 else 60}
 		width: {if is_case() then 0 else 153}
 		bottom: {if un_marked() then 60 else chapter0()}
 		z index: 900
