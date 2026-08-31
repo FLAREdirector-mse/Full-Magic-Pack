@@ -2175,15 +2175,15 @@ keyword:
 	reminder: {handle_merged_rt(if param1.value == "ns" then "They’re artifacts" else "It’s an artifact", moved:"A Vibranium token is an artifact")} with indestructible and "[T]: Add [C]. This mana can't be spent to cast a nonartifact spell."
 #The Hobbit
 keyword:
-	keyword: Recruit
-	match: recruit
-	mode: action
-	reminder: {handle_action_rt(to:"recruit", "Draw")} a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.
-keyword:
 	keyword: Storied
 	match: Storied
 	mode: expert
 	reminder: If you control three or more artifacts, legendaries, and/or Sagas, you have an enduring story for the rest of the game.
+keyword:
+	keyword: Recruit
+	match: recruit
+	mode: action
+	reminder: {handle_action_rt(to:"recruit", "Draw")} a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.
 keyword:
 	keyword: Hone counters
 	match: hone counte<atom-param>*s</atom-param>
